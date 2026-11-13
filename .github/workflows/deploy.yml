@@ -295,7 +295,8 @@ jobs:
         if: ${{ !cancelled() }}
         shell: bash
         run: |
-          git log --oneline --decorate --graph --all -n 50 > _site/dashboard/commits.txt
+        mkdir -p _site/dashboard
+          git log --oneline --decorate --graph --all -n 50 > _site/dashboard/commits.txtmmits.txt
 
       - name: Create deployment dashboard
         if: ${{ !cancelled() }}
