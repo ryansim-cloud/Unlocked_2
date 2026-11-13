@@ -1,15 +1,15 @@
-from bakery import assert_equal
+from dataclasses import dataclass, field
 from drafter import *
-from dataclasses import dataclass
-
-
+import secrets
+from datetime import datetime
+from bakery import assert_equal
 
 set_website_title("Unlocked")
 set_site_information(
     author="Ryan Simpkins",
     description="Encrypt and Decrypt messages using random keys.",
     sources="",
-    planning=["plan.pdf", "design.pdf"],
+    planning=[],
     links=["https://github.com/ryansim-cloud/your-Unlocked_2"]
 )
 hide_debug_information()
@@ -244,6 +244,6 @@ def decrypt_message(
 
     return decrypt_page(state)
 
-assert_state(index(State()), State())
+assert_equal(index(State()), State())
 
 start_server(State())
