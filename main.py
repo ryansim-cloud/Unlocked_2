@@ -4,9 +4,17 @@ from dataclasses import dataclass
 
 
 
-hide_debug_information()
 set_website_title("Unlocked")
+set_site_information(
+    author="Ryan Simpkins",
+    description="Encrypt and Decrypt messages using random keys.",
+    sources="",
+    planning=["plan.pdf", "design.pdf"],
+    links=["https://github.com/ryansim-cloud/your-Unlocked_2"]
+)
+hide_debug_information()
 set_website_framed(False)
+
 
 # Encryption Records
 @dataclass
